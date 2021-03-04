@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[40]:
+# In[14]:
 
 
 import numpy as np
@@ -11,7 +11,7 @@ import os
 from pydataset import data
 
 
-# In[41]:
+# In[15]:
 
 
 #Make a function named get_titanic_data that returns the titanic data from the codeup data science database as a pandas data frame. 
@@ -25,7 +25,7 @@ def get_connection(db, user=user, host=host, password=password):
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
 
 
-# In[42]:
+# In[16]:
 
 
 def get_titanic_data():
@@ -46,7 +46,7 @@ def get_titanic_data():
 get_titanic_data().head()
 
 
-# In[43]:
+# In[17]:
 
 
 # Make a function named get_iris_data that returns the data from the iris_db on the codeup data science database as a pandas data frame. 
@@ -71,7 +71,7 @@ def get_iris_data():
 get_iris_data().head()
 
 
-# In[44]:
+# In[18]:
 
 
 # Once you've got your get_titanic_data and get_iris_data functions written, now it's time to add caching to them. 
@@ -101,14 +101,14 @@ def cached_titanic_data(cached=False):
     return df
 
 
-# In[45]:
+# In[19]:
 
 
 titanic_df = cached_titanic_data(cached=False)
 titanic_df.head()
 
 
-# In[46]:
+# In[20]:
 
 
 def new_iris_data():
@@ -132,7 +132,7 @@ def new_iris_data():
     return df
 
 
-# In[47]:
+# In[21]:
 
 
 def cached_iris_data(cached=False):
@@ -157,11 +157,17 @@ def cached_iris_data(cached=False):
     return df
 
 
-# In[48]:
+# In[22]:
 
 
 iris_df = cached_iris_data(cached=False)
 iris_df.head()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
